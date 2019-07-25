@@ -1,0 +1,18 @@
+.example-element {
+  margin-bottom: 1rem;
+}
+
+.img-fluid{
+	max-width: 100%; height: auto;
+	} 
+
+.backgd-color {
+	background-color: #99CCCC;
+}
+
+
+
+
+.ex3 {
+  transform: translate(<horizontal>,<vertical>);
+}

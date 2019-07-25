@@ -6,11 +6,42 @@
 <br>
 <div class="row">
   {% for destination in destinations %}
-  <a href="{% url 'destination-detail' destination.id %}">
-    <img src="{{destination.pretty_picture.url}}" />
-    <p>{{destination.name}}</p>
-    <p>{{destination.activities}}</p>
-  </a>
+	  <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+
+			<a href="{% url 'destination-detail' destination.id %}">
+				<div class="card-deck">
+				  <div class="card">
+				    <img src="{{destination.pretty_picture.url}}" class="card-img-top" alt="...">
+				    <div class="card-body">
+				      <h5 class="card-title">{{destination.name}}</h5>
+			</a>
+				      <p class="card-text">{{destination.activities}}</p>
+				    </div>
+				    <div class="card-footer">
+				      <small class="text-muted">Last Updated: {{destination.created_time|timesince }}</small>
+				    </div>
+				  </div>
+				</div>
+				  	
+		</div>
+  
   {% endfor %}
 </div>
 {% endblock content %}
+
+
+<!-- <a href="{% url 'destination-detail' destination.id %}">
+<div class="card-deck">
+  <div class="card">
+    <img src="{{destination.pretty_picture.url}}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{destination.name}}</h5>
+</a>
+      <p class="card-text">{{destination.activities}}</p>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">Last updated 3 mins ago</small>
+    </div>
+  </div>
+</div>
+ -->
